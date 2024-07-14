@@ -1,0 +1,134 @@
+
+
+GIT : GLOBAL INFORMATION TRACKER
+	
+	It is also known as Version control system or Source code management.
+	
+	VCM : It is used to track the versions of the application
+	
+	SCM : It is used to monitor the who is developing , changing or modifying the data.
+	
+	
+
+What is GIT :
+
+Git is used to track the files and to maintain multiple versions of the file and you can revert back to versions you want.
+It makes collabaration easy by allowing the changes of many people and merging them into single source code.
+
+
+GIT STAGES :
+
+						(GIT ADD )									(GIT COMMIT)
+		Workig Directory					Stagig Area									Repositry
+		(non tracked files					(All tracked files							(
+		 will be here)						are here )		
+		 
+		 
+		 
+		 
+GIT COMMANDS : 
+
+1.	yum install git -y 				-			To install git without our permission
+
+2.	git init					-			To used to initialise the files
+
+
+3.	git add Filename				-			Used to add in staging area where your files are tracked
+	git add * / git --all / git --a			-			Used to add all files
+
+4.	git status					-			used to get status of  you files
+
+
+5. 	git commit -m "message" filename		-			used to save changes or ,odifications done in staging area
+	git commit -m "message" file1 file2		-			used to save chages of multiple files
+	git commit -m "message" .			-			used to save changes of all files
+	git commit --amend --author "name <email>"	-			used to change latest commit author and mail
+	git commit --amend -m "message"		-				used to chage latest commitme message
+	 
+	
+	
+6.	git log						-			used to see commits of all files
+	git log --oneline				-			used to print partial commit id and message only
+	git log --pretty=oneline			-			used to print full commit id and message
+	git log -2					-			used to get latest 2 commits
+	git log -2 --oneline				-			used to get latest two commits with partal ID and message
+	git log --follow --all filename			-			used to get all commits of a particular file 
+	
+7.	git show commitID				-			used to see changes of particular ID
+	git show commitID --stat			-			used to see changes of particular ID in statastic format
+	
+8.	git config user.name				-			used to change username
+	git config user.email				-			used to change email ID
+	
+9. 	git rm --cached filename			-			used to untrack the files which already in tracked status
+
+10.	vim gitignore (add unwanted files)		-			used to save unwanted to track filesinto hidden folder
+	git add *					-			it will track al files except gitigore files
+	git add -f *					-			it will track all the file even hidden files forcefully
+	
+	
+11.GIT RESET COmMANDS :
+	
+	SOFT : This command is mainly used to delete only COMMITS
+	HARD : This command is used to delete both ACTIONS and COMMITS.
+	REVERT : This command is used to delete the only ACTIONS based on the commit ID
+	
+	git reset --soft HEAD~2				-			Used to delete only COMMITS
+	
+	git reset --hard HEAD~2				-			used to delete both actions and COMMITS
+	
+	git revert commitID				-			used to delete only ACTIONS based on commitID
+	
+	 
+	 
+	 
+12. GIT BRANCHES 
+
+	git branch					-			used to see current branch and all availble branches
+	
+	git checkout branchname				-			used to change from one branch to other
+	
+	git merge branchname				-			used to merge the branches to current branch
+	
+	git branch -b branchname			-			used to create branch and swith to created branch
+	
+	git branch D branchname				-			used to delete the branch (You must be outside of the branch when you deleting)
+	
+	
+	
+	
+	
+GIT-HUB :
+
+13. git remote add origin https/SShLink			-		to connect git with remote repo
+	git remote rm origin				-		to remove connection b/w git and repo
+
+14. git push -u origin branchName			-		to push git branch to github repo
+	git push -u origin br1 br2			-		to push multiple branches
+	git push -u origin --all			-		to push all branches
+
+
+15.  git pull origin branchname				-		to pulla branches from repo
+
+16. git remote add origin sshKey			-		to push with out cred
+	ssh-keygen								-		to ceate new keygen (add created key in repo)
+
+17. git push -u origin --delete branchname		-		to delete branch in github
+
+18. git reflog						-		to know the deleted commits
+
+19.	git cherry-pick commitID			-		to get the deleted commits back
+
+20. git clone sshLink					-		to pull entire repositry into local
+	git pull sshLink				-		to pull only chnages/commits
+
+21. git tag						-		to know present list of tags availble (tags are used to gruoping)
+	git tag tagname					-		to create tagname
+	git push -u origin tagname			-		to push tags into repo
+	
+
+22. git diff						-		used to check presence of differences in present branch to other branch
+
+
+
+
